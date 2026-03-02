@@ -136,12 +136,10 @@ public:
 		isWaiting = false;
 
 		float tempX = static_cast<float>(getRandomInt(-300, 300));
-		this->speedX = (tempX >= 0.0f) ? (tempX + 300.0f) : (tempX - 300.0f);
+		this->speedX = (tempX > 0.0f) ? (tempX + 300.0f) : (tempX - 300.0f);
 
 		float tempY = static_cast<float>(getRandomInt(-100, 100));
-		this->speedY = (tempY >= 0.0f) ? (tempY + 80.0f) : (tempY - 80.0f);
-
-
+		this->speedY = (tempY > 0.0f) ? (tempY + 80.0f) : (tempY - 80.0f);
 	}
 
 	void Draw(SDL_Renderer* renderer) const override {
